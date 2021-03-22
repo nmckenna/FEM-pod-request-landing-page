@@ -12,7 +12,6 @@
     --black: 18, 23, 37;
     --white: 255, 255, 255;
 
-
     font-family: 'Chivo', sans-serif;
 }
 
@@ -50,7 +49,6 @@
             rgba(var(--black), 85%),
             rgba(var(--black), 85%)
     ), url('../assets/mobile/image-host.jpg') no-repeat 58% 0 fixed;
-    background-size: cover;
     height: 100vh;
 }
 
@@ -161,7 +159,6 @@
 
     /*Page Styling */
     .page-wrapper {
-        background-size: 491px 767px;
         background: rgb(var(--black)) url('../assets/tablet/image-host.jpg') no-repeat fixed top right;
         height: 100vh;
     }
@@ -231,9 +228,8 @@
 @media (min-width: 1440px) {
     /*Page Styling */
     .page-wrapper {
-        background-size: 888px 640px;
-        background: rgb(var(--black)) url('../assets/desktop/image-host.jpg') no-repeat fixed center right;
-        height: 100vh;
+        background: url('../assets/desktop/image-host.jpg') no-repeat fixed, rgb(var(--black));
+        background-position: right 0 top 130px;
     }
 
     .pod-logo {
@@ -246,7 +242,6 @@
         left: 165px;
         width: 723px;
         height: 509px;
-        background-color: rgb(var(--black));
     }
 
     .pod-background-dots {
