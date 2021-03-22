@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <title>Frontend Mentor | Pod request access landing page</title>
+</head>
+<body>
+<main class="page-wrapper">
+    <figure>
+        <img class="pod-logo" src="./assets/desktop/logo.svg" alt="Pod Logo">
+    </figure>
+    <section class="request-access">
+        <h1 class="title-text">Publish your podcasts <span class="title-text-highlight">everywhere.</span></h1>
+
+        <p class="body-text">Upload your audio to Pod with a single click. We’ll then distribute your podcast to
+            Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+
+        <div class="request-access-logos">
+            <img src="./assets/desktop/spotify.svg" alt="Spotify logo">
+            <img src="./assets/desktop/apple-podcast.svg" alt="Apple Podcast logo">
+            <img src="./assets/desktop/google-podcasts.svg" alt="Google Podcast logo">
+            <img src="./assets/desktop/pocket-casts.svg" alt="Pocket Casts logo">
+        </div>
+
+        <form class="request-access-form" name="requestAccess" onsubmit="" method="post">
+            <input id="request-access-email" type="email" name="emailAddress" class="request-access-email"
+                   placeholder="Email address"
+                   maxlength="28" required>
+            <input type="submit" value="Request Access" class="request-access-button">
+        </form>
+    </section>
+    <figure>
+        <img class="pod-background-dots" src="./assets/desktop/bg-pattern-dots.svg" alt="Background pattern of dots">
+    </figure>
+
+</main>
+
+<script src="./scripts/script.js"></script>
+</body>
+</html>

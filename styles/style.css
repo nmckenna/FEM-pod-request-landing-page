@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;900&display=swap');
+
+:root {
+
+    /*Colours*/
+    --paleGreen: 84, 230, 175;
+    --lightGreen: 179, 255, 226;
+    --darkGray: 44, 52, 75;
+    --mediumGray: 90, 102, 138;
+    --lightGray: 194, 203, 229;
+    --red: 251, 62, 62;
+    --black: 18, 23, 37;
+    --white: 255, 255, 255;
+
+
+    font-family: 'Chivo', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Text Styling*/
+.title-text {
+    color: rgba(var(--paleGreen));
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    font-size: 26px;
+}
+
+.title-text-highlight {
+    color: rgba(var(--white));
+}
+
+.body-text {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 25px;
+    color: rgb(var(--lightGray));
+    padding: 0 24px;
+}
+
+/*Page Styling*/
+
+.page-wrapper {
+    background: linear-gradient(
+            rgba(var(--black), 85%),
+            rgba(var(--black), 85%)
+    ), url('../assets/mobile/image-host.jpg') no-repeat 58% 0 fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.pod-logo {
+    position: absolute;
+    top: 62px;
+    left: 120px;
+}
+
+.request-access {
+    position: absolute;
+    top: 175px;
+}
+
+.request-access .body-text {
+    margin-top: 16px;
+}
+
+.request-access-form {
+    position: absolute;
+    margin: auto;
+    width: 327px;
+    height: 46px;
+    top: 290px;
+    left: 0;
+    right: 0;
+}
+
+.request-access-form .validation-error {
+    position: absolute;
+    top: 46px;
+    color: rgb(var(--red));
+    font-size: 12px;
+    left: 32px;
+}
+
+.request-access-email {
+    background-color: rgb(var(--darkGray));
+    border: unset;
+    border-radius: 28px;
+    text-indent: 30px;
+    color: rgb(var(--white));
+    height: 46px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.request-access-email::placeholder {
+    color: rgb(var(--lightGray));
+}
+
+.request-access-button {
+    background-color: rgb(var(--paleGreen));
+    border: unset;
+    border-radius: 28px;
+    text-align: center;
+    color: rgb(var(--black));
+    height: 46px;
+    margin-top: 16px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.request-access-button:hover {
+    background-color: rgb(var(--lightGreen));
+}
+
+.request-access-logos {
+    position: absolute;
+    top: 225px;
+    width: 100%;
+    height: 17px;
+    display: flex;
+    justify-content: center;
+}
+
+.request-access-logos img {
+    filter: brightness(0) saturate(100%) invert(39%) sepia(24%) saturate(614%) hue-rotate(187deg) brightness(95%) contrast(88%);
+    margin: 0 5px;
+}
+
+.pod-background-dots {
+    display: none;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+
+    /* Text Styling*/
+    .title-text {
+        font-size: 48px;
+        text-align: left;
+        margin-top: 93px;
+        line-height: 56px;
+    }
+
+    .body-text {
+        text-align: left;
+        line-height: 28px;
+        padding: 0;
+        width: 445px;
+        height: 84px;
+        letter-spacing: 0.08em;
+    }
+
+    /*Page Styling */
+    .page-wrapper {
+        background-size: 491px 767px;
+        background: rgb(var(--black)) url('../assets/tablet/image-host.jpg') no-repeat fixed top right;
+        height: 100vh;
+    }
+
+    .pod-logo {
+        top: 50px;
+        left: 39px;
+    }
+
+    .request-access {
+        top: 258px;
+        left: 39px;
+        width: 635px;
+        height: 510px;
+        background-color: rgb(var(--black));
+    }
+
+    .request-access-form {
+        margin: unset;
+        top: 360px;
+        left: 0;
+        right: unset;
+        width: 427px;
+        height: 56px;
+    }
+
+    .request-access-form .validation-error {
+        top: 60px;
+        left: 32px;
+    }
+
+    .request-access-email {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    .request-access-button {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 5px;
+        left: 260px;
+        width: 162px;
+        height: 46px;
+    }
+
+    .request-access-logos {
+        top: 480px;
+        left: 0;
+        height: 29px;
+        width: 536px;
+    }
+
+    .pod-background-dots {
+        display: unset;
+        position: absolute;
+        top: 920px;
+        left: 30px;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 1440px) {
+    /*Page Styling */
+    .page-wrapper {
+        background-size: 888px 640px;
+        background: rgb(var(--black)) url('../assets/desktop/image-host.jpg') no-repeat fixed center right;
+        height: 100vh;
+    }
+
+    .pod-logo {
+        top: 102px;
+        left: 165px;
+    }
+
+    .request-access {
+        top: 261px;
+        left: 165px;
+        width: 723px;
+        height: 509px;
+        background-color: rgb(var(--black));
+    }
+
+    .pod-background-dots {
+        top: 718px;
+        left: calc(100% - 232px);
+    }
+}
