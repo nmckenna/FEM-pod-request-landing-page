@@ -27,6 +27,7 @@
     text-align: center;
     font-weight: 300;
     font-size: 26px;
+    width: 327px;
 }
 
 .title-text-highlight {
@@ -39,7 +40,7 @@
     font-weight: 300;
     line-height: 25px;
     color: rgb(var(--lightGray));
-    padding: 0 24px;
+    width: 327px;
 }
 
 /*Page Styling*/
@@ -48,19 +49,22 @@
     background: linear-gradient(
             rgba(var(--black), 85%),
             rgba(var(--black), 85%)
-    ), url('../assets/mobile/image-host.jpg') no-repeat 58% 0 fixed;
+    ), url('../assets/mobile/image-host.jpg') no-repeat 58% 0 fixed, rgb(var(--black));
     height: 100vh;
 }
 
 .pod-logo {
-    position: absolute;
     top: 62px;
-    left: 120px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .request-access {
     position: absolute;
     top: 175px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .request-access .body-text {
@@ -146,6 +150,7 @@
         text-align: left;
         margin-top: 93px;
         line-height: 56px;
+        width: 635px;
     }
 
     .body-text {
@@ -166,6 +171,7 @@
     .pod-logo {
         top: 50px;
         left: 39px;
+        transform: unset;
     }
 
     .request-access {
@@ -174,6 +180,7 @@
         width: 635px;
         height: 510px;
         background-color: rgb(var(--black));
+        transform: unset;
     }
 
     .request-access-form {
