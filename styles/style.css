@@ -216,13 +216,9 @@
 
     .request-access-logos {
         order: 1;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
         justify-content: flex-start;
         margin-top: 6.4rem;
-        margin-left: 1.2rem;
-        filter: brightness(0) saturate(100%) invert(39%) sepia(24%) saturate(614%) hue-rotate(187deg) brightness(95%) contrast(88%);
+        margin-left: 0;
     }
 
     .request-access-logos .spotify-logo {
@@ -279,5 +275,9 @@
 
     .request-access-form {
         margin-top: 4rem;
+    }
+
+    .request-access-logos {
+        margin-left: 0;
     }
 }
