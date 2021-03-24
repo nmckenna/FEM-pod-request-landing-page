@@ -1,7 +1,6 @@
 // See: https://pageclip.co/blog/2018-02-20-you-should-use-html5-form-validation.html
 
 const validationErrorClass = 'validation-error';
-const parentErrorClass = 'has-validation-error';
 const emailInput = document.getElementById('request-access-email');
 
 function checkValidity(options) {
@@ -12,14 +11,12 @@ function checkValidity(options) {
 
     if (!emailInput.validity.valid && emailInput.validationMessage) {
         error.className = validationErrorClass;
-        error.textContent = 'Oops! Please check your email';//emailInput.validationMessage;
+        error.textContent = 'Oops! Please check your email';
 
         if (insertError) {
             parent.insertBefore(error, emailInput);
-            // parent.classList.add(parentErrorClass);
         }
     } else {
-        // parent.classList.remove(parentErrorClass);
         error.remove();
     }
 }

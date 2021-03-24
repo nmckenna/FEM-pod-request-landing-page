@@ -12,40 +12,21 @@
     --black: 18, 23, 37;
     --white: 255, 255, 255;
 
+    /* 1rem === 10px */
+    font-size: 62.5%;
     font-family: 'Chivo', sans-serif;
 }
 
-* {
+*, *:before, *:after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Text Styling*/
-.title-text {
-    color: rgba(var(--paleGreen));
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 300;
-    font-size: 26px;
-    width: 327px;
-}
-
-.title-text-highlight {
-    color: rgba(var(--white));
-}
-
-.body-text {
-    text-align: center;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 25px;
-    color: rgb(var(--lightGray));
-    width: 327px;
-}
 
 /*Page Styling*/
 
-.page-wrapper {
+.site-wrapper {
     background: linear-gradient(
             rgba(var(--black), 85%),
             rgba(var(--black), 85%)
@@ -53,52 +34,103 @@
     height: 100vh;
 }
 
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .pod-logo {
-    top: 62px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 13.4rem;
+    margin: 6.2rem auto;
 }
 
 .request-access {
-    position: absolute;
-    top: 175px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
 }
 
-.request-access .body-text {
-    margin-top: 16px;
+.title-text {
+    color: rgba(var(--paleGreen));
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    font-size: 2.6rem;
+}
+
+.title-text em {
+    color: rgba(var(--white));
+    font-style: normal;
+}
+
+.body-text {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+    color: rgb(var(--lightGray));
+    margin-top: 1.6rem;
+}
+
+.request-access-logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.3rem;
+    margin-left: 1.2rem;
+    filter: brightness(0) saturate(100%) invert(39%) sepia(24%) saturate(614%) hue-rotate(187deg) brightness(95%) contrast(88%);
+}
+
+.request-access-logos .spotify-logo {
+    width: 5.6rem;
+    height: 1.7rem;
+    margin-right: 2.3rem;
+}
+
+.request-access-logos .apple-logo {
+    width: 4.5rem;
+    height: 1.7rem;
+    margin-right: 2.5rem;
+}
+
+.request-access-logos .google-logo {
+    width: 7.3rem;
+    height: 1.1rem;
+    margin-right: 1.6rem;
+}
+
+.request-access-logos .pocket-logo {
+    width: 7.7rem;
+    height: 1.5rem;
+    margin-right: 1.6rem;
 }
 
 .request-access-form {
-    position: absolute;
-    margin: auto;
-    width: 327px;
-    height: 46px;
-    top: 290px;
-    left: 0;
-    right: 0;
+    position: relative;
+    margin-top: 4.8rem;
 }
 
-.request-access-form .validation-error {
+.request-access-form .validation-error { /*TODO: Update these values*/
     position: absolute;
-    top: 46px;
+    top: 4.8rem;
+    left: 3.2rem;
     color: rgb(var(--red));
-    font-size: 12px;
-    left: 32px;
+    font-size: 1.2rem;
+    z-index: 500;
 }
 
 .request-access-email {
     background-color: rgb(var(--darkGray));
     border: unset;
-    border-radius: 28px;
-    text-indent: 30px;
+    border-radius: 2.8rem;
+    text-indent: 3.2rem;
     color: rgb(var(--white));
-    height: 46px;
+    padding: 1.45rem 0;
     width: 100%;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 1.4rem;
+    font-weight: 700;
 }
 
 .request-access-email::placeholder {
@@ -108,14 +140,14 @@
 .request-access-button {
     background-color: rgb(var(--paleGreen));
     border: unset;
-    border-radius: 28px;
+    border-radius: 2.8rem;
     text-align: center;
     color: rgb(var(--black));
-    height: 46px;
-    margin-top: 16px;
+    margin-top: 1.6rem;
     width: 100%;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 1.45rem 0;
+    font-weight: 700;
     transition: background-color 0.15s ease-in-out;
 }
 
@@ -123,136 +155,129 @@
     background-color: rgb(var(--lightGreen));
 }
 
-.request-access-logos {
-    position: absolute;
-    top: 225px;
-    width: 100%;
-    height: 17px;
-    display: flex;
-    justify-content: center;
-}
-
-.request-access-logos img {
-    filter: brightness(0) saturate(100%) invert(39%) sepia(24%) saturate(614%) hue-rotate(187deg) brightness(95%) contrast(88%);
-    margin: 0 5px;
-}
-
-.pod-background-dots {
-    display: none;
-}
-
 /* Tablet */
 @media (min-width: 768px) {
 
-    /* Text Styling*/
-    .title-text {
-        font-size: 48px;
-        text-align: left;
-        margin-top: 93px;
-        line-height: 56px;
-        width: 635px;
-    }
-
-    .body-text {
-        text-align: left;
-        line-height: 28px;
-        padding: 0;
-        width: 445px;
-        height: 84px;
-        letter-spacing: 0.08em;
-    }
-
-    /*Page Styling */
-    .page-wrapper {
-        background: rgb(var(--black)) url('../assets/tablet/image-host.jpg') no-repeat fixed top right;
+    .site-wrapper {
+        background: url('../assets/desktop/bg-pattern-dots.svg') no-repeat top 92rem left 3rem, rgb(var(--black)) url('../assets/tablet/image-host.jpg') no-repeat fixed top right;
         height: 100vh;
     }
 
     .pod-logo {
-        top: 50px;
-        left: 39px;
-        transform: unset;
+        width: 13.4rem;
+        margin: 5rem 0 0 3.9rem;
     }
 
     .request-access {
-        top: 258px;
-        left: 39px;
-        width: 635px;
-        height: 510px;
         background-color: rgb(var(--black));
-        transform: unset;
+        margin-left: 3.9rem;
+        margin-right: 9.4rem;
+        margin-top: 15.3rem;
+    }
+
+    .title-text {
+        margin-top: 9.3rem;
+        text-align: left;
+        font-weight: 300;
+        font-size: 4.8rem;
+    }
+
+    .body-text {
+        text-align: left;
+        line-height: 2.8rem;
+        margin-top: 3.1rem;
+        margin-right: 19rem;
+        font-size: 1.8rem;
+        font-weight: 300;
     }
 
     .request-access-form {
-        margin: unset;
-        top: 360px;
-        left: 0;
-        right: unset;
-        width: 427px;
-        height: 56px;
+        position: relative;
+        margin-top: 4rem;
     }
 
     .request-access-form .validation-error {
-        top: 60px;
-        left: 32px;
+        top: 6.4rem;
+        left: 3.2rem;
     }
 
     .request-access-email {
-        position: absolute;
-        margin: 0;
-        padding: 0;
-        top: 0;
-        left: 0;
-        height: 100%;
+        padding: 1.95rem 0;
+        width: 42.7rem;
     }
 
     .request-access-button {
         position: absolute;
-        margin: 0;
-        padding: 0;
-        top: 5px;
-        left: 260px;
-        width: 162px;
-        height: 46px;
+        margin-top: 0.5rem;
+        left: 26rem;
+        width: 16.2rem;
+
     }
 
     .request-access-logos {
-        top: 480px;
-        left: 0;
-        height: 29px;
-        width: 536px;
+        order: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 6.4rem;
+        margin-left: 1.2rem;
+        filter: brightness(0) saturate(100%) invert(39%) sepia(24%) saturate(614%) hue-rotate(187deg) brightness(95%) contrast(88%);
     }
 
-    .pod-background-dots {
-        display: unset;
-        position: absolute;
-        top: 920px;
-        left: 30px;
+    .request-access-logos .spotify-logo {
+        width: 9.6rem;
+        height: 2.9rem;
+        margin-right: 4rem;
     }
+
+    .request-access-logos .apple-logo {
+        width: 7.8rem;
+        height: 2.9rem;
+        margin-right: 4.1rem;
+    }
+
+    .request-access-logos .google-logo {
+        width: 12.5rem;
+        height: 1.8rem;
+        margin-right: 2.7rem;
+    }
+
+    .request-access-logos .pocket-logo {
+        width: 12.9rem;
+        height: 2.6rem;
+    }
+
 }
 
 /*Desktop*/
 @media (min-width: 1440px) {
-    /*Page Styling */
-    .page-wrapper {
-        background: url('../assets/desktop/image-host.jpg') no-repeat fixed, rgb(var(--black));
-        background-position: right 0 top 130px;
+    .site-wrapper {
+        background: url('../assets/desktop/bg-pattern-dots.svg') no-repeat top 71.8rem right, rgb(var(--black)) url('../assets/desktop/image-host.jpg') no-repeat fixed right 0 top 130px;
     }
 
     .pod-logo {
-        top: 102px;
-        left: 165px;
+        width: 13.4rem;
+        margin: 10.2rem 0 0 16.5rem;
     }
 
     .request-access {
-        top: 261px;
-        left: 165px;
-        width: 723px;
-        height: 509px;
+        margin-left: 16.5rem;
+        margin-right: 55.2rem;
+        margin-top: 10.3rem;
     }
 
-    .pod-background-dots {
-        top: 718px;
-        left: calc(100% - 232px);
+    .title-text {
+        margin-top: 8.8rem;
+        font-size: 5.2rem;
+    }
+
+    .body-text {
+        margin-top: 2.4rem;
+        margin-right: 27.8rem;
+    }
+
+    .request-access-form {
+        margin-top: 4rem;
     }
 }

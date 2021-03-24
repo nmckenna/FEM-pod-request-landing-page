@@ -9,35 +9,33 @@
 
     <title>Frontend Mentor | Pod request access landing page</title>
 </head>
-<body class="page-wrapper">
+<body class="site-wrapper">
 <main>
-    <figure>
+    <div class="content-wrapper">
         <img class="pod-logo" src="./assets/desktop/logo.svg" alt="Pod Logo">
-    </figure>
-    <section class="request-access">
-        <h1 class="title-text">Publish your podcasts <span class="title-text-highlight">everywhere.</span></h1>
 
-        <p class="body-text">Upload your audio to Pod with a single click. We’ll then distribute your podcast to
-            Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+        <section class="request-access">
+            <h1 class="title-text">Publish your podcasts <em>everywhere.</em></h1>
 
-        <div class="request-access-logos">
-            <img src="./assets/desktop/spotify.svg" alt="Spotify logo">
-            <img src="./assets/desktop/apple-podcast.svg" alt="Apple Podcast logo">
-            <img src="./assets/desktop/google-podcasts.svg" alt="Google Podcast logo">
-            <img src="./assets/desktop/pocket-casts.svg" alt="Pocket Casts logo">
-        </div>
+            <p class="body-text">Upload your audio to Pod with a single click. We’ll then distribute your podcast to
+                Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
 
-        <form class="request-access-form" name="requestAccess" onsubmit="" method="post">
-            <input id="request-access-email" type="email" name="emailAddress" class="request-access-email"
-                   placeholder="Email address"
-                   maxlength="28" required>
-            <input type="submit" value="Request Access" class="request-access-button">
-        </form>
-    </section>
-    <figure>
-        <img class="pod-background-dots" src="./assets/desktop/bg-pattern-dots.svg" alt="Background pattern of dots">
-    </figure>
+            <div class="request-access-logos">
+                <img class="spotify-logo" src="./assets/desktop/spotify.svg" alt="Spotify logo">
+                <img class="apple-logo" src="./assets/desktop/apple-podcast.svg" alt="Apple Podcast logo">
+                <img class="google-logo" src="./assets/desktop/google-podcasts.svg" alt="Google Podcast logo">
+                <img class="pocket-logo" src="./assets/desktop/pocket-casts.svg" alt="Pocket Casts logo">
+            </div>
 
+            <form class="request-access-form" name="requestAccess" onsubmit="" method="post">
+                <input id="request-access-email" type="email" name="emailAddress" class="request-access-email"
+                       placeholder="Email address"
+                       maxlength="28" required aria-label="Enter email address here">
+                <input type="submit" value="Request Access" class="request-access-button"
+                       aria-label="Submit Pod access request">
+            </form>
+        </section>
+    </div>
 </main>
 
 <script src="./scripts/script.js"></script>
